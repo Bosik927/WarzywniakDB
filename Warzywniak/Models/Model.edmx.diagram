@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2b027579561143d2acd3b579ef53b6da" Name="Diagram1">
+        <EntityTypeShape EntityType="WarzywniakModel.Adress" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarzywniakModel.OrderProduct" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarzywniakModel.Order" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarzywniakModel.Product" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarzywniakModel.User" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WarzywniakModel.Warehouse" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="WarzywniakModel.FK__Adresses__UserId__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="WarzywniakModel.FK__OrderProd__Order__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="WarzywniakModel.FK__OrderProd__Produ__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="WarzywniakModel.FK__Orders__UserId__403A8C7D" ManuallyRouted="false" />
+        <AssociationConnector Association="WarzywniakModel.FK__Warehouse__Order__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="WarzywniakModel.FK__Warehouse__Produ__46E78A0C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
