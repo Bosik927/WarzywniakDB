@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using Warzywniak.Models;
 
 namespace Warzywniak.Controllers
 {
-    public class ProductsController : Controller
+	public class ProductsController : Controller
     {
         private WarzywniakEntities db = new WarzywniakEntities();
 

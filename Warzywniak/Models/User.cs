@@ -9,27 +9,24 @@
 
 namespace Warzywniak.Models
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class User
-    {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Adresses = new HashSet<Adress>();
-            this.Orders = new HashSet<Order>();
-        }
-    
-        public int UserId { get; set; }
-        public string Nick { get; set; }
-        public string Password { get; set; }
-        public int PhoneNumber { get; set; }
-        public string EmailAddress { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Adress> Adresses { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
-    }
+	using System;
+	using System.Collections.Generic;
+	using System.ComponentModel;
+	using System.ComponentModel.DataAnnotations;
+
+	public partial class User
+	{
+		public int UserId { get; set; }
+		[DisplayName("User Name:")]
+		[Required(ErrorMessage ="This field is required.")]
+		public string Nick { get; set; }
+		[DisplayName("Password:")]
+		[DataType(DataType.Password)]
+		[Required(ErrorMessage = "This field is required.")]
+		public string Password { get; set; }
+		public int PhoneNumber { get; set; }
+		public string EmailAddress { get; set; }
+
+		public string LoginErrorMessage { get; set; }
+	}
 }
